@@ -1,0 +1,21 @@
+{
+  "apiVersion": "score.dev/v1b1",
+  "metadata": {
+    "name": "paymentsapi"
+  },
+  "spec": {
+    "environment": {
+      "type": "api",
+      "executionEnvironment": "aws",
+      "region": "eu-west-2"
+    },
+    "services": {
+      "database": {
+        "type": "postgres",
+        "properties": {
+          "size": "small"
+        }
+      }
+    }
+  }
+}

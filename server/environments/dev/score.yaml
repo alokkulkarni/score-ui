@@ -1,0 +1,30 @@
+apiVersion: score.dev/v1b1
+metadata:
+  name: paymentsapi
+spec:
+  containers:
+    app:
+      image: paymentsapi:latest
+      variables:
+        '': ''
+        DB_HOST:
+          secret: db_host
+        DB_PORT:
+          secret: db_port
+        DB_NAME:
+          secret: db_name
+        DB_USER:
+          secret: db_user
+        DB_PASSWORD:
+          secret: db_password
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+  region: eu-west-2
+  services:
+    database:
+      type: postgresql
+      version: '13'
+      storage:
+        size: 10Gi

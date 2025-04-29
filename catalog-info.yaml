@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: score-ui
+  description: 
+  annotations:
+    argocd/app-name: score-ui
+    backstage.io/kubernetes-id: score-ui
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: alokkulkarni/score-ui
+    sonarqube.org/project-key: score-ui
+    backstage.io/code-coverage: scm-only
+    # backstage.io/source-location: ''
+    # backstage.io/managed-by-location: ''
+    jenkins.io/job-full-name: "score-ui"
+    jira.com/project-key: score-ui # The key of the Jira project to track for this entity, or Comma-separated list of Jira project keys optionally prefixed with the instance name
+    # jira.com/components: component,component,component # Jira component name separated with a comma. The Roadie Backstage Jira Plugin Jira annotation `/component` is also supported here by default
+    # jira.com/filter-ids: 12345,67890 # Jira filter id separated with a comma
+    jira.com/incoming-issues-status: Incoming # The name of the status for incoming issues in Jira. Default: New
+spec:
+  type: library
+  lifecycle: production
+  owner: user:default/alokkulkarni

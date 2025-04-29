@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: score-ui
-  description: 
+  description: score-ui
   annotations:
     argocd/app-name: score-ui
     backstage.io/kubernetes-id: score-ui
